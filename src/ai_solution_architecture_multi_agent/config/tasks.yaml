@@ -1,0 +1,33 @@
+research_task:
+  description: >
+    Review the {topic} document and summarize the main topics.
+  expected_output: >
+    Bullet points of the most critical takeaways from the document, returned in {lang}.
+  agent: ai_solution_architecture_researcher
+
+analysis_task:
+  description: >
+    Analyze the summarized topics from the {topic} document and identify actionable insights for AI solution design.
+  expected_output: >
+    A brief containing actionable insights categorized into key areas such as
+    scalability, efficiency, and innovation, returned in {lang}.
+  agent: ai_solution_architecture_analyst
+
+engineering_task:
+  description: >
+    Use the actionable insights provided by the analysis to draft an initial
+    AI solution architecture outline for {topic}, considering scalability, modularity, and performance.
+  expected_output: >
+    A technical outline detailing the proposed AI solution architecture
+    with annotated diagrams or workflows, returned in {lang}.
+  agent: ai_solution_architecture_engineer
+
+summarization_task:
+  description: >
+    Synthesize the research, analysis, and engineering tasks into a concise
+    executive summary for stakeholders about {topic}.
+  expected_output: >
+    A one-page summary highlighting the main findings, recommendations, and
+    proposed AI solution architecture, formatted for easy review and returned in {lang}.
+  agent: ai_solution_architecture_summarizer
+  output_file: report.md

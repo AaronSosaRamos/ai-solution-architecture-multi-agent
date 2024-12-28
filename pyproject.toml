@@ -1,0 +1,22 @@
+[project]
+name = "ai_solution_architecture_multi_agent"
+version = "0.1.0"
+description = "ai-solution-architecture-multi-agent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0",
+    "streamlit",
+    "agentops"
+]
+
+[project.scripts]
+ai_solution_architecture_multi_agent = "ai_solution_architecture_multi_agent.main:run"
+run_crew = "ai_solution_architecture_multi_agent.main:run"
+train = "ai_solution_architecture_multi_agent.main:train"
+replay = "ai_solution_architecture_multi_agent.main:replay"
+test = "ai_solution_architecture_multi_agent.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
